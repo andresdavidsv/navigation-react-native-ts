@@ -23,4 +23,24 @@ export const globalStyles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
   },
+  avatarContainer: {
+    alignItems: 'center',
+    marginTop: 20,
+  },
+  avatar: {
+    width: 150,
+    height: 150,
+    borderRadius: 100,
+  },
+  menuContainer: {
+    marginVertical: 20,
+    marginHorizontal: 20,
+    alignItems: 'center',
+  },
+  menuButton: {
+    marginVertical: 10,
+  },
+  menuText: {
+    fontSize: 20,
+  },
 });
