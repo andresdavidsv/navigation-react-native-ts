@@ -4,17 +4,24 @@ import { NavigationContainer } from '@react-navigation/native';
 // import { StackNavigator } from './src/navigator/StackNavigator';
 // import { MenuSideBasic } from './src/navigator/MenuSideBasic';
 import { MenuSide } from './src/navigator/MenuSide';
+import { AuthProvider } from './src/context/AuthContext';
 // import { Tabs } from './src/navigator/Tabs';
 
 const App = () => {
   return (
     <NavigationContainer>
-      {/* <StackNavigator /> */}
-      {/* <MenuSideBasic /> */}
-      <MenuSide />
-      {/* <Tabs /> */}
+      <AppState>
+        {/* <StackNavigator /> */}
+        {/* <MenuSideBasic /> */}
+        <MenuSide />
+        {/* <Tabs /> */}
+      </AppState>
     </NavigationContainer>
   );
+};
+
+const AppState = ({ children }: { children: JSX.Element }) => {
+  return <AuthProvider>{children}</AuthProvider>;
 };
 
 export default App;
